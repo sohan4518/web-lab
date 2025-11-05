@@ -13,7 +13,7 @@ function convertJsonToObject() {
     try { 
       const jsonDate = JSON.parse(dateInput); 
       const dateObject = new Date(jsonDate.date); 
-      document.getElementById('dateOutput').textContent = Date Object: ${dateObject}; 
+      document.getElementById('dateOutput').textContent = `Date Object: ${dateObject}`; 
     } catch (error) { 
       document.getElementById('dateOutput').textContent = 'Invalid JSON or date format!'; 
     } 
@@ -58,5 +58,5 @@ async function createHash() {
     const hashArray = Array.from(new Uint8Array(hashBuffer)); 
     const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); 
      
-    document.getElementById('hashOutput').textContent = Hash: ${hashHex}; 
+    document.getElementById('hashOutput').textContent = `Hash: ${hashHex}`; 
   }
